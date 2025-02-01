@@ -11,8 +11,7 @@ from dotenv import load_dotenv
 import os
 app = FastAPI()
 load_dotenv()
-oai_api_key = "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"  # Replace with your API key
-openai.api_key = oai_api_key
+
 
 def process_document(file_path):
     if file_path.endswith(".pdf"):
