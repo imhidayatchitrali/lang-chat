@@ -8,12 +8,11 @@ from langchain.llms import OpenAI  # Can be replaced with Bedrock LLM
 from langchain.chains import RetrievalQA
 from fastapi import FastAPI, File, UploadFile, Form
 from dotenv import load_dotenv
-import os
-app = FastAPI()
 load_dotenv()
+app = FastAPI()
 
-import os
 openai_api_key = os.getenv("OPENAI_API_KEY")  
+openai.api_key = openai_api_key
 
 def process_document(file_path):
     if file_path.endswith(".pdf"):
