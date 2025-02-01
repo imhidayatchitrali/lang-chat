@@ -12,6 +12,8 @@ import os
 app = FastAPI()
 load_dotenv()
 
+import os
+openai_api_key = os.getenv("OPENAI_API_KEY")  
 
 def process_document(file_path):
     if file_path.endswith(".pdf"):
